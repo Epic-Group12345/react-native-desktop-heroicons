@@ -6,17 +6,18 @@
     "@types/node": "^18.0.4",
     "@types/react": "^17.0.2",
     "react-native-builder-bob": "^0.18.3",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@types/bun": "latest"
   },
-  "name": "@nandorojo/heroicons",
-  "version": "0.0.4",
+  "name": "@epic-group/heroicons",
+  "version": "0.0.1",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.tsx",
   "module": "lib/module/index.js",
   "types": "index.d.ts",
   "scripts": {
     "prepare": "bun generate && bunx bob build",
-    "generate": "bunx ts-node ./generate/index.ts"
+    "generate": "bun ./generate/index.ts"
   },
   "files": [
     "src",
@@ -50,5 +51,7 @@
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "type": "module",
+  "private": true
 }
