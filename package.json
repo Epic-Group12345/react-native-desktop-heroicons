@@ -53,5 +53,5 @@
     "access": "public"
   },
   "type": "module",
-  "private": true
+  "private": false
 }
