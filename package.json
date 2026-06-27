@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "@svgr/core": "^6.2.1",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
     "@types/node": "^18.0.4",
     "@types/react": "^17.0.2",
     "react-native-builder-bob": "^0.18.3",
@@ -13,8 +15,8 @@
   "module": "lib/module/index.js",
   "types": "index.d.ts",
   "scripts": {
-    "prepare": "yarn generate && bob build",
-    "generate": "npx ts-node ./generate/index.ts"
+    "prepare": "bun generate && bunx bob build",
+    "generate": "bunx ts-node ./generate/index.ts"
   },
   "files": [
     "src",
@@ -37,6 +39,8 @@
     "lib/"
   ],
   "dependencies": {
+    "baseline-browser-mapping": "^2.10.40",
+    "caniuse-lite": "^1.0.30001799",
     "react-native-svg": "^13.1.0"
   },
   "prettier": {
